@@ -64,3 +64,19 @@ function makeSnowflake() {
         snows [i].firstChild.style.width = size;
     }
 }
+function makePoem() {
+    let stih = document.getElementsByClassName('poem');
+    for (let i = 0; i<stih.length; i++) {
+        stih [i].style.fontSize = (17 + (i+1)) + 'px';
+        let r = Math.round(Math.random()*255);
+        let g = Math.round(Math.random()*255);
+        let b = Math.round(Math.random()*255);
+        let color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        stih [i].style.color = color;
+        r = Math.round(Math.random()*255);
+        g = Math.round(Math.random()*255);
+        b = Math.round(Math.random()*255);
+        color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        stih [i].style.backgroundColor = color;
+    }
+}
