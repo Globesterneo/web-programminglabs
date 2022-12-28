@@ -46,3 +46,21 @@ function makeStairs() {
         steps [i].innerHTML = 'Блок номер ' + Number (i+1);
     }
 }
+function makeSnowflake() {
+    let snow = document.getElementById('snowflake');
+    snow.style.position = 'relative';
+    let snowCount = 35;
+    for(let i = 0; i < snowCount; i++){
+        snow.innerHTML += '<div class="snowflake-item"><img src="https://funforkids.ru/pictures/snowflake/snowflake051.png"></div>';
+    }
+
+    let snows = document.getElementsByClassName('snowflake-item');
+    for(let i = 0; i<snows.length; i++) {
+        let size = Math.round(Math.random() * (150 - 40) + 40) + 'px';
+        snows [i].style.position = 'absolute';
+        snows [i].style.left = Math.round(Math.random()*(window.innerWidth - 100)) + 'px';
+        snows [i].style.top = Math.round(Math.random()*window.innerHeight) + 'px';
+        snows [i].firstChild.style.height = size;
+        snows [i].firstChild.style.width = size;
+    }
+}
