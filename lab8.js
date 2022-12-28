@@ -14,3 +14,12 @@ function showDaysCount(params){
 }
 
 window.addEventListener('load', showDate);
+
+function showTime() {
+    let outTime = document.getElementById('time');
+    let currentTime = new Date();
+    outTime.innerHTML = currentTime.toLocaleTimeString('ru');
+}
+
+window.addEventListener('load', showTime);
+setInterval(showTime, 1000);
