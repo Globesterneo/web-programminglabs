@@ -10,3 +10,20 @@ function clickMe1(button){
     else
         button.innerHTML = 'Глеб';
 }
+function clickMe2(button){
+    if( button.innerHTML == 'Нажми меня'){
+        button.innerHTML = 'Ещё раз нажми';
+        button.style.color = 'Lime';
+    }
+    else if( button.innerHTML == 'Ещё раз нажми'){
+        button.innerHTML = 'Ещё';
+        button.style.color = 'DeepPink';}
+    else if( button.innerHTML == 'Ещё'){
+        button.innerHTML = 'Начать сначала';
+        button.style.color = 'DodgerBlue';}
+    else if( button.innerHTML == 'Начать сначала'){
+        button.innerHTML = 'Нажми меня';
+        button.style.color = 'Red';}
+    else
+        button.innerHTML = 'Нажми меня';
+}
