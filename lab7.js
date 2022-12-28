@@ -80,3 +80,10 @@ function makePoem() {
         stih [i].style.backgroundColor = color;
     }
 }
+function makeTable() {
+    let tab = document.getElementById('table');
+    let tabCount = 9;
+    for(let i = 1; i<=tabCount; i++) {
+        tab.innerHTML += `<div class="table-item">28 * ${i} = ${28*i}</div>`;
+    }
+}
